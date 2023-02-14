@@ -1,0 +1,29 @@
+<header>
+    <a href="{% url 'home' %}" class="logo" title="Studen Affairs"><i class="fa-solid fa-graduation-cap fa-2xl"></i> <span id ="siteName">Student Affairs</span> </a>
+    <ul class="headerList">
+        <li>
+            <a href="{% url 'home' %}" title="Home"><i class="fa-solid fa-house"></i> <span class="label">Home</span> </a>
+            </i>
+        </li>
+        <li>
+            <a href="{% url 'about' %}" title="About Us"> <i class="fa-solid fa-id-badge"></i> <span class="label">About US</span> </a>
+        </li>
+        <li>
+            <a href="{% url 'contact' %}" title="Contact Us"><i class="fa-solid fa-phone"></i> <span class="label">Contact Us</span> </a>
+        </li>
+    </ul>
+</header>
+<nav>
+    <ul class="NavList">
+        <li>
+            <a href="{% url 'add' %}" title="Add Student"><i class="fa-solid fa-plus"></i> <span class="attributeslabel">Add Student</span> </a>
+        </li>
+        <li>
+            <a href="{% url 'edit' %}" title="Edit Student"><i class="fa-solid fa-pen-to-square"></i> <span class="attributeslabel">Edit Student</span> </a>
+        </li>
+        <li>
+            <a href="{% url 'view' %}" title="View Student"><i class="fa-solid fa-users-viewfinder"></i> <span class="attributeslabel">View Students</span> </a>
+        </li>
+        
+    </ul>
+</nav>

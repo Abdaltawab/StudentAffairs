@@ -1,0 +1,59 @@
+{% load static %}
+
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'assets/CSS/Style1.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/CSS/StudentDepartmentStyle.css'%}">
+    <title>Student Affairs</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/Images/NewLogo.png' %}">
+    <script src="https://kit.fontawesome.com/e60114c054.js" crossorigin="anonymous"></script>
+    <script src="{% static 'assets/JS/main.js'%}"></script>
+
+</head>
+
+<body onresize="customize()" onload="customize()">
+
+    {% include 'Header.html' %}
+
+    <form method="post">
+        <h1>Assign Departmet</h1>
+        <div>
+            <label for="name" class="Name">Name: </label>
+            <input type="text" name="name" id="name" placeholder="Enter Your Name">
+        </div>
+        <br>
+        <div>
+            <label for="id" class="ID">ID:  </label>
+            <input type="text" name="id" id="id" placeholder="Enter Your ID">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="department" class="Department">Department: </label>
+            <input list="department" name="depart" required placeholder="Select Department">
+            <datalist id="department">
+                    <option value="IS">
+                    <option value="CS">
+                    <option value="DS">
+                    <option value="AI">
+                    <option value="IT">
+                </datalist>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Assign" class="Button">
+            <input type="reset" value="Reset" class="Button">
+        </div>
+
+    </form>
+
+    {% include 'Footer.html' %}
+
+
+</body>
+
+</html>

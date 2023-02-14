@@ -1,0 +1,65 @@
+{% load static %}
+
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'assets/CSS/Style1.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/CSS/ViewStudents.css'%}">
+    <title>Student Affairs</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/Images/NewLogo.png' %}">
+    <script src="https://kit.fontawesome.com/e60114c054.js" crossorigin="anonymous"></script>
+    <script src="{% static 'assets/JS/main.js'%}"></script>
+    <script src="{% static 'assets/JS/ViewStudent.js'%}"></script>
+
+</head>
+
+<body onresize="customize()" onload="customize()">
+
+    {% include 'Header.html' %}
+
+
+    <div class="View_All_Students_page">
+        <h1>
+            Students
+        </h1>
+
+        <input type="search" class="textField" id="textField1" onblur="outFocus1()" title="Search About Students by ID or Name" oninput="regularSearch1()">
+            <div class="search" id="textPart1" onclick="searchFocus1()" title="Search"><i class="fa-solid fa-magnifying-glass"></i> <span class="attributeslabel">Search</span> </div>
+
+        <table class="View_All_Students_table" id = "Table1">
+            <TR class="table_heder">
+                <TH id="Student Col"> Student </TH>
+                <TH> ID </TH>
+                <TH> DOB </TH>
+                <TH> GPA </TH>
+                <TH> Level </TH>
+                <TH> Status</TH>
+                <TH> Department </TH>
+                <TH> E-mail </TH>
+                <TH> Phone Number </TH>
+            </TR>
+
+            {% for student in Students %}
+            <TR id="RowData" class="RowData1">
+                <TD> {{ student.name }} </TD>
+                <TD> {{ student.sID }} </TD>
+                <TD> {{ student.dateOfBirth }} </TD>
+                <TD> {{ student.gpa }} </TD>
+                <TD> {{ student.level }} </TD>
+                <TD> {{ student.status }} </TD>
+                <TD> {{ student.department }} </TD>
+                <TD> {{ student.email }} </TD>
+                <TD> {{ student.phone }} </TD>
+            </TR>
+            {% endfor %}
+        </table>
+
+    </div>
+
+    {% include 'Footer.html' %}
+
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+{% load static %}
+
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'assets/CSS/Style1.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/CSS/AddStudent.css'%}">
+    <title>Student Affairs</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/Images/NewLogo.png' %}">
+    <script src="https://kit.fontawesome.com/e60114c054.js" crossorigin="anonymous"></script>
+    <script src="{% static 'assets/JS/main.js'%}"></script>
+    <script src="{% static 'assets/JS/AddStudent.js'%}"></script>
+
+</head>
+
+<body onresize="customize()" onload="customize()">
+
+    {% include 'Header.html' %}
+
+    <!--Page Content------------------------------------------------>
+
+    <form class="Content" onsubmit="checkInfo()" method = "POST">
+        {% csrf_token %}
+
+        <div>
+            <h1>Register New Student</h1>
+        </div>
+        <div>
+            <label for="ID">ID:</label>
+            <input name="sID" type="number" maxlength="8" minlength="8" placeholder="Enter Your ID" id="ID" oninput="checkID()">
+        </div>
+        <div>
+            <label for="Name">Name:</label>
+            <input name="name" type="text" minlength="2" placeholder="Enter Your Name" id="Name">
+        </div>
+        <div>
+            <label for="DOB"> Date Of Birth:</label>
+            <input name="dateOfBirth" id="DOB" type="date">
+        </div>
+        <div>
+            <label for="GPA">GPA:</label>
+            <input name="gpa" id="GPA" type="number" max="4" step="0.1" required placeholder="Enter your GPA">
+        </div>
+        <div>
+            <label for="Level" class="Level">Level: </label>
+            <select name="level" id="Level">
+                    <option value="First">First</option>
+                    <option value="Second">Second</option>
+                    <option value="Third">Third</option>
+                    <option value="Forth">Forth</option>
+            </select>
+        </div>
+        <div>
+            <div class="Radio">
+                <label>Gender:</label>
+                <input id="male" type="radio" name="gender" value="Male">
+                <label for="male">Male</label>
+            </div>
+            <div class="Radio">
+                <input id="female" type="radio" name="gender" value="Female">
+                <label for="female">Female</label>
+            </div>
+        </div>
+        <div>
+            <div class="Radio">
+                <label>Status:</label>
+                <input id="active" type="radio" name="status" value="Active">
+                <label for="active"> Active </label>
+            </div>
+            <div class="Radio">
+                <input id="inactive" type="radio" name="status" value="Inactive">
+                <label for="inactive"> Inactive </label>
+            </div>
+        </div>
+        <div>
+            <label for="department" class="Department">Department: </label>
+            <select name="department" id="department">
+                    <option value="Information Systems">Information Systems</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Decision Support">Decision Support</option>
+                    <option value="Artificial Intelligence">Artificial Intelligence</option>
+                    <option value="Information Technology">Information Technology</option>
+            </select>
+        </div>
+        <div>
+            <label for="Email">Email: </label>
+            <input type="email" placeholder="Enter Your Email" name="email" id="Email">
+        </div>
+        <div>
+            <label for="Phone"> phone number: </label>
+            <input type="number" placeholder="Enter Your Phone number" name="phone" Id="Phone">
+        </div>
+        <input class="AddBtn" type="submit" value="Add">
+        <input class="ResetBtn" type="reset" value="Reset">
+    </form>
+
+    {% include 'Footer.html' %}
+
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+{% load static %}
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'assets/CSS/Style1.css'%}">
+    <title>Student Affairs</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/Images/NewLogo.png' %}">
+    <script src="https://kit.fontawesome.com/e60114c054.js" crossorigin="anonymous"></script>
+    <script src="{% static 'assets/JS/main.js'%}"></script>
+
+</head>
+
+<body onresize="customize()" onload="customize()">
+
+    {% include 'Header.html' %}
+
+    <!--Section 1------------------------------------------------>
+    <div class="Section1">
+        <div class="S1Text">
+            <h1>
+                Everything is Easy!
+            </h1>
+            <h2>
+                we're providing the most porwefull features in the most simple way!
+            </h2>
+            <h3>
+                Our goal is to make you happy, so you'll always find us interested in what you like and use the most
+            </h3>
+            <a href="{% url 'add' %}"><button class="S1But" type="button"><i class="fa-solid fa-plus"></i>Add Student</button></a>
+        </div>
+        <div class="S1Img">
+            <img src="{% static 'assets/Images/Header Photo.jpg' %}">
+        </div>
+    </div>
+
+    <!--Section 2------------------------------------------------>
+    <div class="Section2">
+        <h1>What's New?!</h1>
+        <br>
+        <p>We're giving you the opporutnity to simply and easily perform your daily tasks in the most possible simple way. <br> All in one place!
+            <br>
+            <br> You can add a student, edit any information, queckly and efficient searching about student's data, <br> assign departments and filter results where ever you are!
+            <br>
+            <br> Our technical support and intelligent assesstant are available all time for you!
+            <br>
+            <br> Enjoy!
+            <br>
+        </p>
+    </div>
+    <div class="Features">
+        <a href="{% url 'add' %}">
+            <div class="AddStudent">
+                <i class="fa-solid fa-plus fa-4x"></i><br>
+                <span class="AddTitle">ADD NEW STUDENT</span>
+                <p class="FeatureDescription">Add a new student and store his (Full Name, ID, DOB, GPA, Level, Status, Department, E-mail, Phone Number)
+                </p>
+
+            </div>
+        </a>
+        <a href="{% url 'edit' %}">
+            <div class="EditStudent">
+                <i class="fa-solid fa-pen-to-square fa-4x"></i><br>
+                <span class="AddTitle">EDIT A STUDENT</span>
+                <p class="FeatureDescription">Edit an existing student's data (Full Name, ID, DOB, GPA, Level, Status, E-mail, Phone Number) <br>
+                </p>
+            </div>
+        </a>
+        <a href="{% url 'view' %}">
+            <div class="AssignDepartment">
+                <i class="fa-solid fa-users-viewfinder fa-4x"></i><br>
+                <span class="AddTitle">View All Students</span>
+                <p class="FeatureDescription">View all students you had saved and search easily by either ID or Name <br> (Not Editing Already Assigned Ones!)</p>
+            </div>
+        </a>
+    </div>
+
+    {% include 'Footer.html' %}
+
+</body>
+
+</html>

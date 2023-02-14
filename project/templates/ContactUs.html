@@ -1,0 +1,47 @@
+{% load static %}
+
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'assets/CSS/Style1.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/CSS/ContactStyle.css'%}">
+    <title>Student Affairs</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/Images/NewLogo.png' %}">
+    <script src="https://kit.fontawesome.com/e60114c054.js" crossorigin="anonymous"></script>
+    <script src="{% static 'assets/JS/main.js'%}"></script>
+
+</head>
+
+<body onresize="customize()" onload="customize()">
+    
+    {% include 'Header.html' %}
+
+    <form class="Body">
+        <h1>Contact Us</h1>
+        <br>
+        <br>
+        <div>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter Your Full Name">
+        </div>
+        <div>
+            <label for="Email">Your E-mail</label>
+            <input type="text" id="Email" placeholder="Enter Your Email">
+        </div>
+        <div class="EnquiryDiv">
+            <label for="Enquiry" class="EnquiryLabel">Your Enquiry</label>
+            <textarea name="Enquiry" cols="40" rows="5" placeholder="Write Your Enquiry"></textarea>
+        </div>
+
+        <input type="submit" class="Send" value="Send">
+
+    </form>
+
+    {% include 'Footer.html' %}
+
+
+</body>
+
+</html>

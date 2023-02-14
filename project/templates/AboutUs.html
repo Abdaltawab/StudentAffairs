@@ -1,0 +1,115 @@
+{% load static %}
+
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'assets/CSS/Style1.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/CSS/AboutUs.css'%}">
+    <title>Student Affairs</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/Images/NewLogo.png' %}">
+    <script src="https://kit.fontawesome.com/e60114c054.js" crossorigin="anonymous"></script>
+    <script src="{% static 'assets/JS/main.js'%}"></script>
+
+</head>
+
+<body onresize="customize()" onload="customize()">
+    
+    {% include 'Header.html' %}
+
+    <!--Page Content------------------------------------------------>
+    <div class="Container">
+        <h1>Student Affairs Team</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Arabic
+                    </th>
+                    <th>
+                        ID
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Youssef Mohammed Abd El-Hay Ali
+                    </td>
+                    <td>
+                        يوسف محمد عبد الحي علي
+                    </td>
+                    <td>
+                        20200669
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Youssef Hatem Ibrahim Mohammed
+                    </td>
+                    <td>
+                        يوسف حاتم إبراهيم محمد
+                    </td>
+                    <td>
+                        20200647
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Abdaltawab Hussein Abdaltawab
+                    </td>
+                    <td>
+                        عبد التواب حسين عبد التواب
+                    </td>
+                    <td>
+                        20200310
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mohamed Hisham Abdelzaher
+                    </td>
+                    <td>
+                        محمدهشام عبد الظاهر
+                    </td>
+                    <td>
+                        20200483
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Abdelrahman Mostafa Mohamed
+                    </td>
+                    <td>
+                        عبد الرحمن مصطفي محمد
+                    </td>
+                    <td>
+                        20200827
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Ziad Mysara Yousef Mohamed
+                    </td>
+                    <td>
+                        زياد ميسره يوسف محمد
+                    </td>
+                    <td>
+                        20200209
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        All Copyrights &copy; Reserved 2022-2023
+    </footer>
+
+</body>
+
+</html>

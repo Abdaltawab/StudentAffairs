@@ -1,0 +1,262 @@
+html {
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    min-width: 100%;
+    margin: 0px;
+    margin-top: 100px;
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a,
+.Search {
+    text-align: center;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 25px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+header {
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to bottom right, #0066ff, #00d9ff);
+    height: 100px;
+    top: 0;
+    position: fixed;
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+}
+
+.logo {
+    display: flex;
+    color: aliceblue;
+    position: relative;
+    margin-top: 30px;
+    margin-left: 50px;
+    size: 200px;
+    font-size: 2rem;
+}
+
+.logo:hover {
+    color: black;
+}
+
+.headerList {
+    display: flex;
+    margin-right: 0px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.headerList li {
+    display: flex;
+    margin-left: 25px;
+    margin-right: 25px;
+    color: aliceblue;
+}
+
+.headerList li i {
+    margin-right: 15px;
+}
+
+.headerList li a:hover {
+    font-size: 28px;
+    filter: invert(100);
+}
+
+nav {
+    background-color: #4c5474;
+    width: 140%;
+}
+
+.NavList {
+    width: 100%;
+    padding-left: 0px;
+    display: flex;
+    justify-content: left;
+    margin: 0px;
+    height: 50px;
+}
+
+.NavList .Search {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    margin-right: 20px;
+}
+
+.NavList i {
+    margin-right: 15px;
+}
+
+.NavList li {
+    display: flex;
+    margin-left: 50px;
+}
+
+.NavList .textField {
+    margin-top: 15px;
+    height: 20px;
+    position: absolute;
+    right: 30px;
+    display: none;
+    background-color: rgb(193, 201, 222);
+}
+
+.NavList li a:hover,
+.Search:hover {
+    cursor: pointer;
+    font-size: 26px;
+    transition-duration: 400ms;
+    color: #00d9ff;
+    transition-timing-function: ease;
+}
+
+
+/*Page Content-----------------------------------------------*/
+
+.Section1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.S1Text {
+    width: 500px;
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.S1Text h3 {
+    font-weight: normal;
+}
+
+.S1But {
+    min-width: 180px;
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 50px;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 5px;
+    background-image: linear-gradient(to left, #0066ff, #00d9ff);
+    box-shadow: inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+    font-size: large;
+    font-weight: bold;
+}
+
+.S1But i {
+    margin-right: 15px;
+    position: relative;
+}
+
+.S1But:hover {
+    width: 185px;
+    height: 48px;
+    background-image: linear-gradient(to left, #0066ff, #00d9ff, #00d9ff);
+    transition-duration: 5000ms;
+    transition-timing-function: ease;
+}
+
+.S1But:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.S1Img {
+    margin-right: 250px;
+}
+
+
+/*----div section 2----*/
+
+.Section2 {
+    margin-left: 200px;
+    font-size: large;
+}
+
+
+/* ---Features---- */
+
+.Features {
+    min-width: 1309px;
+    min-height: 540px;
+    background-image: linear-gradient(to bottom right, #0066ff, #00d9ff);
+    background-size: cover;
+    margin-top: 80px;
+    padding-top: 90px;
+    padding-left: 40px;
+    margin-right: auto;
+    display: inline-block;
+}
+
+.AddStudent,
+.EditStudent,
+.AssignDepartment {
+    display: inline-block;
+    background-color: aliceblue;
+    width: 30%;
+    height: 400px;
+    margin: 0px;
+    border-radius: 15px;
+}
+
+.Features a {
+    color: #000;
+}
+
+.Features div:hover {
+    height: 450px;
+    width: 33%;
+    color: #0066ff;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+}
+
+.Features i {
+    margin-top: 30px;
+}
+
+.Features span {
+    font-weight: bold;
+}
+
+.FeatureDescription {
+    font-size: 20px;
+    height: 300px;
+}
+
+.AddTitle {
+    display: inline-block;
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+.AddIcon img,
+.EditIcon img,
+.AssignIcon img {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+footer {
+    bottom: 0px;
+    padding-left: 20px;
+    padding-top: 10px;
+    height: 30px;
+    background-color: rgb(58, 53, 53);
+    color: aliceblue;
+    width: 135.5%;
+}

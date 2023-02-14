@@ -1,0 +1,122 @@
+{% load static %}
+
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'assets/CSS/Style1.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/CSS/AddStudent.css'%}">
+    <title>Student Affairs</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/Images/NewLogo.png' %}">
+    <script src="https://kit.fontawesome.com/e60114c054.js" crossorigin="anonymous"></script>
+    <script src="{% static 'assets/JS/main.js'%}"></script>
+    <script src="{% static 'assets/JS/AddStudent.js'%}"></script>
+</head>
+
+<body onresize="customize()" onload="customize()">
+
+    {% include 'Header.html' %}
+
+    <!--Page Content------------------------------------------------>
+
+    <form class="Content" onsubmit="checkInfo()" method="POST">
+        {% csrf_token %}
+        <div>
+            <h2>
+                Edit a Student
+            </h2>
+        </div>
+
+        <div>
+            <label for="ID">ID:</label>
+            <input type="number" maxlength="8" required placeholder="Enter Your ID" id="ID" min="10000000" oninput="checkID()" onblur="checkLength()" name = "id">
+            <div class="warning" id="idWA"></div>
+            <p class="warningRec" id="idWarning"></p>
+        </div>
+
+        <div>
+            <label for="Name">Name:</label>
+            <input type="text" required minlength="2" placeholder="Enter Your Name" id="name" name = "name">
+        </div>
+
+        <div>
+            <label for="DOP"> Date Of Birth:</label>
+            <input id="DOP" type="date" name = "dateOfBirth">
+        </div>
+
+        <div>
+            <label for="GPA">GPA:</label>
+            <input id="GPA" type="number" max="4" required placeholder="Enter your GPA" step="0.1" name = "gpa">
+            <div class="warning"></div>
+        </div>
+
+        <div>
+            <label for="Level" class="Level">Level: </label>
+            <select id="Level" name = "level">
+                    <option value="First">First</option>
+                    <option value="Second">Second</option>
+                    <option value="Third">Third</option>
+                    <option value="Forth">Forth</option>
+            </select>
+        </div>
+        <div>
+            <div class="Radio">
+                <label>gender:</label>
+                <input id="male" type="radio" name="gender" value="Male">
+                <label for="male"> Male. </label>
+            </div>
+
+            <div class="Radio">
+                <input id="female" type="radio" name="gender" value="Female">
+                <label for="female"> Female. </label>
+            </div>
+
+        </div>
+
+
+        <div>
+            <div class="Radio">
+                <label>Status:</label>
+                <input id="active" type="radio" name="status" value="active">
+                <label for="active"> Active. </label>
+            </div>
+
+            <div class="Radio">
+                <input id="inactive" type="radio" name="status" value="inactive">
+                <label for="inactive"> Inactive. </label>
+            </div>
+        </div>
+
+        <div>
+            <label for="department" class="Department">Department: </label>
+            <select id="department" name = "department">
+                <option value="AI">Artificial Intelligence</option>
+                <option value="CS">Computer Science</option>
+                <option value="DS">Decision Support</option>
+                <option value="DB">Information Systems</option>
+                <option value="IT">Information Technology</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Email: </label>
+            <input type="email" required placeholder="ُEnter Your Email" value="" name="email">
+        </div>
+
+        <div>
+            <label> phone number: </label>
+            <input type="number" required placeholder="Enter Your Phone number" name="phone">
+            <div class="warning"></div>
+        </div>
+        <input class="AddBtn" type="submit" value="Save">
+        <input class="ResetBtn" type="reset" value="Reset">
+        <button class = "Delete" >Delete</button>
+    </form>
+
+    {% include 'Footer.html' %}
+
+
+</body>
+
+</html>

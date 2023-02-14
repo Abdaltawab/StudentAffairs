@@ -1,0 +1,45 @@
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Container {
+    background-image: linear-gradient(154deg, white, #006fff);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    color: rgb(0, 0, 0);
+}
+
+table,
+tr,
+th,
+td {
+    text-align: left;
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    width: 100%;
+}
+
+td,
+th {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+table,
+h1 {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}

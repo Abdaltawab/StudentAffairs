@@ -1,0 +1,54 @@
+{% load static %}
+
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'assets/CSS/Style1.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/CSS/Projects.css'%}">
+    <title>Student Affairs</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/Images/NewLogo.png' %}">
+    <script src="https://kit.fontawesome.com/e60114c054.js" crossorigin="anonymous"></script>
+    <script src="{% static 'assets/JS/main.js'%}"></script>
+
+</head>
+
+<body onresize="customize()" onload="customize()">
+
+    {% include 'Header.html' %}
+
+
+    <h1>Projects</h1>
+
+    <div class="Content">
+
+        <a href="Home.html">
+            <div>
+                Students Affairs
+            </div>
+        </a>
+
+        <a href="">
+            <div>
+                Human Resources
+            </div>
+        </a>
+
+        <a href="">
+            <div>
+                Higher Studies
+            </div>
+        </a>
+
+        <a href="">
+            <div>
+                Laboratory Tracking
+            </div>
+        </a>
+    </div>
+
+    {% include 'Footer.html' %}
+
+</body>
+
