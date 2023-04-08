@@ -1,8 +1,8 @@
 # StudentAffairs
 ## Technologies:
-### Frontend:
-- HTML
-- CSS
-- JavaScript
-### Backend:
-- Django
+- Frontend:
+  - HTML
+  - CSS
+  - JavaScript
+- Backend:
+  - Django
